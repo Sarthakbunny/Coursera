@@ -81,7 +81,7 @@ $ajaxUtils.sendGetRequest(
     $ajaxUtils.sendGetRequest(
       allCategoriesUrl,
         function (allCategories) {
-          var selector=chooseRandomCategory(allCategories)
+          var selector=chooseRandomCategory(allCategories);
           responseText=insertProperty(responseText,"randomCategoryShortName",selector);  
         });
     document.querySelector("#main-content")
