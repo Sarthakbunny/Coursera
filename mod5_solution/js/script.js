@@ -80,8 +80,9 @@ $ajaxUtils.sendGetRequest(
   function (responseText) {
     $ajaxUtils.sendGetRequest(
       allCategoriesUrl,
-        function (allCategoriesUrl) {
-          responseText=insertProperty(responseText,"randomCategoryShortName",chooseRandomCategory(allCategoriesUrl));  
+        function (allCategories) {
+          var selector=chooseRandomCategory(allCategories)
+          responseText=insertProperty(responseText,"randomCategoryShortName",selector);  
         });
     document.querySelector("#main-content")
       .innerHTML = responseText;
